@@ -3,8 +3,12 @@
     <body>
         <script>
             function duplicateEvenNumbers(){
-                // Task: Duplicate the even numbers after the button was clicked
-                // Requirement: Use a loop to solve the task
+                let evenNumberElements = document.getElementsByTagName("p")
+                for (let i = 0; i < evenNumberElements.length; i++) {
+                    let element = evenNumberElements[i];
+                    element.innerHTML = element.innerHTML * 2;
+                    
+                }
             }
         </script>
         <div>1</div>
@@ -13,6 +17,6 @@
         <p>4</p>
         <div>5</div>
         <p>6</p>
-        <button>Duplicate Even Numbers</button>
+        <button onclick=duplicateEvenNumbers()>Duplicate Even Numbers</button>
     </body>
 </html>
