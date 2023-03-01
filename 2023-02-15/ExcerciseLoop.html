@@ -10,7 +10,7 @@
             function duplicateEvenNumbers(){
                 let evenNumberElements = document.getElementsByTagName("p")
                 for (let i = 0; i < evenNumberElements.length; i++) {
-                    let element = evenNumberElements[i];
+                    let element = evenNumberElements.item(i);
                     element.innerHTML = element.innerHTML * 2;
                 }
             }

@@ -1,0 +1,15 @@
+Ordnen Sie http Methoden folgenden Aktionen zu:
+Liste von Studierenden abrufen -> GET
+Studierenden löschen -> DELETE
+Studierenden Vorname ändern -> PUT
+Neuen Studierenden anlegen -> CREATE
+Einzelnen Studierenden abrufen -> GET
+
+Welche der obigen Aktionen ist idempotent und warum?
+GET, DELETE, PUT sind Methoden, welche idempotent sind.
+- Bei GET erfolgt keine Veränderung der Datengrundlage. Folglich wird selbst bei mehrfachem Aufruf kein unterschiedliches Ergebnis geliefert.
+- Bei DELETE und PUT werden bestehende Elemente gezielt angesprochen. Folglich wird beim PUT beim Veränderung, 
+    bei mehrfacher Ausführung die gleichen Änderungen erneut umgesetzt, sodass es keine Veränderung gibt.
+    Bei DELETE ist es ähnlich. Wird beim erneuten Aufruf versucht, ein nicht bestehendes (bzw. bereits gelöschtes) Element zu löschen, 
+    kann dies nicht erneut erfolgen, da es bereits gelöscht. Folglich wird bei mehrfachem Aufruf dennoch das gewünschte Resultat erzielt.
+(CREATE ist nicht idempotent => Ein Element kann nicht zweimal erzeugt werden. => 2x Aufruf = 2x Elemente (mit gleichem Inhalt))
