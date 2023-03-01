@@ -1,0 +1,10 @@
+{
+    "MatrikelNumbel": 123456,
+    "Name": "Anna Bolika",
+    "TotalCredits": 120,
+    "FavoriteThreeModules": ["WTA", "ITSEC", "SMA"],
+    "Campus": {
+        "CampusId": 3,
+        "City": "Bielefeld"
+    }
+}
